@@ -1,0 +1,46 @@
+<!-- <a [routerLink]="['/test-reg']">正則測試</a> -->
+
+<div *ngIf="true">
+  rIndex: {{selectedCell.rIndex}}
+  cIndex: {{selectedCell.cIndex}}
+  content: {{selectedCell.content}}
+</div>
+
+<div>
+  <input type="file" (change)="onFileChange($event)" multiple="false" />
+
+  <button mat-button (click)="openDialog(template)">跳出剪貼簿</button>
+</div>
+
+<mat-tab-group (selectedTabChange)="changeTab($event)">
+  <ng-container *ngFor="let tab of tabs">
+    <mat-tab [label]="tab.label">
+    </mat-tab>
+  </ng-container>
+</mat-tab-group>
+
+<div style="margin-top: 20px;">
+  <table>
+    <tbody>
+      <tr *ngFor="let row of showData; let rowIndex = index">
+        <td *ngFor="let cell of row; let colIndex = index" style="border: solid 1px;" [attr.colspan]="cell.colspan"
+          [attr.rowspan]="cell.rowspan">
+          <button (click)="selectCell(cell)"> {{ cell.content }}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<ng-template #template>
+  <mat-dialog-content>
+    <div display="flex">
+      <button (click)="genJSON()">產生JSON</button>
+      <textarea id="clipboard" cols="30" rows="10" [(ngModel)]="clipboardValue"></textarea>
+      <button [cdkCopyToClipboard]="clipboardValue">複製剪貼簿</button>
+    </div>
+  </mat-dialog-content>
+</ng-template>
+
+
