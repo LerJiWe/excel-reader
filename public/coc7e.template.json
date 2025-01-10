@@ -226,7 +226,7 @@
       {
         "key": "commands",
         "type": "string",
-        "value": "CC<={SAN} SAN\nCC<={LUK} LUK\nCC<={STR} STR\nCC<={CON} CON\nCC<={DEX} DEX\nCC<={APP} APP\nCC<={POW} POW\nCC<={SIZ} SIZ\nCC<={INT} INT\nCC<={EDU} EDU\n===調查===\nCC<={{AT91}} 偵查\nCC<={{V129}} 聆聽\nCC<={{V127}} 圖書館使用\n===社交===\nCC<={{AT79}} 心理學\nCC<={{V81}} 信用評級\nCC<={{V95}} 話術\nCC<={{V75}} 魅惑\nCC<={{AT73}} 說服\nCC<={{V113}} 威嚇\n===戰鬥===\nCC<={{V87}} 閃避\nCC<={{V97}} 鬥毆\nCC<={{V103}} 火器：{{J103}}\nCC<={{V109}} 急救\n===其它===\n"
+        "value": "CC<={SAN} SAN\nCC<={LUK} LUK\nCC<={STR} STR\nCC<={CON} CON\nCC<={DEX} DEX\nCC<={APP} APP\nCC<={POW} POW\nCC<={SIZ} SIZ\nCC<={INT} INT\nCC<={EDU} EDU\n===調查===\nCC<={{AT91}} 偵查\nCC<={{V129}} 聆聽\nCC<={{V127}} 圖書館使用\n===社交===\nCC<={{AT79}} 心理學\nCC<={{V81}} 信用評級\nCC<={{V95}} 話術\nCC<={{V75}} 魅惑\nCC<={{AT73}} 說服\nCC<={{V113}} 威嚇\n===戰鬥===\nCC<={{V87}} 閃避\nCC<={{V97}} 鬥毆\nCC<={{V103}} 火器：{{J103}}\nCC<={{V109}} 急救\n===其它===\nIfNEq<<{{N69}},{{V69}},CC<={{V69}} 藝術 {{J69}}\n,>>IfNEq<<{{N61}},{{V61}},CC<={{V61}} 會計\n,>>IfNEq<<{{N71}},{{V71}},CC<={{V71}} 藝術 {{J71}}\n,>>"
       }
     ]
   }

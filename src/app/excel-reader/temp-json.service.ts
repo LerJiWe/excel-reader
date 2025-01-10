@@ -43,13 +43,16 @@ export class TempJSONService {
    */
   private genStr(str: string) {
     const replaceAction = (match: string, key: string) => {
-      console.log('match', match);
-      console.log('key', key);
+      // console.log('match', match);
+      // console.log('key', key);
       let r = this.getValue(key);
       return r;
     }
-    return str.replace(/\{\{(\w+)\}\}/g, replaceAction);
+    return str
+      .replace(/\{\{(\w+)\}\}/g, replaceAction)
+      .replace(/IfNEq<<(([\w\s\u4e00-\u9fa5\<\=]+\,)+)>>/g, this.IfNEq);
   }
+  //CC<={{V69}} 藝術 {{J69}},
 
   private genNum(str: string) {
     let tempStr = this.genStr(str);
@@ -98,6 +101,32 @@ export class TempJSONService {
       power--;
     }
     return result;
+  }
+
+  // 第一個跟第二個參數如果不相等，就回傳第三個否則回傳空字串
+  private IfNEq(match: string, key: string) {
+    console.log('ifeq執行');
+    console.log('key', key);
+    let paramsArray = key.split(',');
+    console.log('params', paramsArray);
+
+    return paramsArray[0] === paramsArray[1] ?
+      "" : paramsArray[2];
+
+    // while (true) {
+    //   let n: number = key.search(/(\w+\,)/g)
+    //   console.log('nnn', n)
+    //   if (n === -1) {
+    //     console.log("出去囉")
+    //     break;
+    //   }
+    //   let token = key.substring(0, n + 1);
+    //   console.log('token', token);
+    //   key = key.substring(n + 2);
+    //   console.log('new key', key);
+    // }
+
+    return match;
   }
 
 }
