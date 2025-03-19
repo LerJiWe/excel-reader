@@ -50,7 +50,7 @@ export class TempJSONService {
     }
     return str
       .replace(/\{\{(\w+)\}\}/g, replaceAction)
-      .replace(/IfNEq<<(([\w\s\u4e00-\u9fa5\<\=]+\,)+)>>/g, this.IfNEq);
+      .replace(/IfNEq<<(([\w\s\u4e00-\u9fa5\<\=\:\-]+\,)+)>>/g, this.IfNEq);
   }
   //CC<={{V69}} 藝術 {{J69}},
 
