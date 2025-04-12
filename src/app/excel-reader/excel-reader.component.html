@@ -1,4 +1,5 @@
 <!-- <a [routerLink]="['/test-reg']">正則測試</a> -->
+<app-template-selector></app-template-selector>
 
 <div *ngIf="true">
   rIndex: {{selectedCell.rIndex}}
@@ -6,9 +7,23 @@
   content: {{selectedCell.content}}
 </div>
 
-<div>
-  <input type="file" (change)="onFileChange($event)" multiple="false" />
+<!-- <div>
+  <input type="file" class="fileUploadInput" (change)="uploadFile($event)" #fileUpload />
+  <button class="fileUploadButton" (click)="fileUpload.click()" mat-raised-button color="primary">
+    <mat-icon>upload_file</mat-icon>
+    {{ t('license.upload') }}
+  </button>
+</div> -->
 
+<div>
+  <input type="file" style="display: none;" (change)="onFileChange($event)" multiple="false" #fileUpload />
+  <button (click)="fileUpload.click()" mat-raised-button color="primary">
+    <mat-icon>upload_file</mat-icon>
+    上傳檔案
+  </button>
+</div>
+
+<div>
   <button mat-button (click)="openDialog(template)">跳出剪貼簿</button>
 </div>
 
@@ -36,11 +51,9 @@
 <ng-template #template>
   <mat-dialog-content>
     <div display="flex">
-      <button (click)="genJSON()">產生JSON</button>
+      <!-- <button (click)="genJSON()">產生JSON</button> -->
       <textarea id="clipboard" cols="30" rows="10" [(ngModel)]="clipboardValue"></textarea>
-      <button [cdkCopyToClipboard]="clipboardValue">複製剪貼簿</button>
+      <button mat-button [cdkCopyToClipboard]="clipboardValue">複製剪貼簿</button>
     </div>
   </mat-dialog-content>
 </ng-template>
-
-

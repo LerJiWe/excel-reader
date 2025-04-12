@@ -6,11 +6,9 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table'
-import { ExcelReaderComponent } from './excel-reader.component';
 
 @NgModule({
   declarations: [
-
   ],
   imports: [
     CommonModule,

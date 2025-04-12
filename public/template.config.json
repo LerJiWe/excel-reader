@@ -1,0 +1,14 @@
+[
+    {
+        "name": "克蘇魯的呼喚",
+        "path": "coc7e.template.json"
+    },
+    {
+        "name": "貓蘇魯",
+        "path": "cat_coc7e.template.json"
+    },
+    {
+        "name": "克蘇魯的呼喚泡普",
+        "path": "pulp_coc7e.template.json"
+    }
+]

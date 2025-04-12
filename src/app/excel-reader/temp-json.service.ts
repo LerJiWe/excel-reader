@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ExcelDataService } from './excel-data.service';
 
-import template from '../../../public/coc7e.template.json';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +9,10 @@ export class TempJSONService {
   private templateData: Array<Template> = [];
 
   constructor(private excelDataSvc: ExcelDataService) {
-    this.templateData = (<any>template) || [];
+  }
+
+  public genTemplateData(template: any) {
+    this.templateData = template || [];
   }
 
   genResultJSON() {

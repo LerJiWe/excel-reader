@@ -5,11 +5,12 @@ import { MatButtonModule } from '@angular/material/button'
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 import * as XLSX from 'xlsx';
 
 import { ExcelDataService } from './excel-data.service';
 import { TempJSONService } from './temp-json.service';
-
+import { TemplateSelectorComponent } from '../template-selector/template-selector.component';
 type AOA = any[][];
 
 @Component({
@@ -21,7 +22,10 @@ type AOA = any[][];
     MatButtonModule,
     ClipboardModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule,
+
+    TemplateSelectorComponent
   ],
   templateUrl: './excel-reader.component.html',
   styleUrl: './excel-reader.component.css'
@@ -157,6 +161,8 @@ export class ExcelReaderComponent {
 
   openDialog(templateRef: TemplateRef<any>) {
     const dialogRef = this.dialog.open(templateRef);
+    this.clipboardValue = "";
+    this.genJSON();
   }
 
   changeTab($event: any) {

@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>選擇模板</mat-label>
+    <mat-select (selectionChange)="select($event)">
+        <ng-container *ngFor="let tmp of templateArray">
+            <mat-option [value]="tmp.path">{{tmp.name}}</mat-option>
+        </ng-container>
+    </mat-select>
+</mat-form-field>
