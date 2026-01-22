@@ -1,0 +1,233 @@
+[
+  {
+    "key": "kind",
+    "type": "string",
+    "value": "character"
+  },
+  {
+    "key": "data",
+    "type": "obj",
+    "obj": [
+      {
+        "key": "name",
+        "type": "string",
+        "value": "{{D3}}"
+      },
+      {
+        "key": "initiative",
+        "type": "number",
+        "value": "{{H29}}"
+      },
+      {
+        "key": "memo",
+        "type": "string",
+        "value": "{{B14}}\n{{B15}}\n{{B16}}\n{{B17}}\n{{B18}}\n{{B19}}\n{{B20}}"
+      },
+      {
+        "key": "status",
+        "type": "objArray",
+        "array": [
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "HP"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{O24}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{S24}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "MP"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{O26}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{S26}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "SAN"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{Q29}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{O29}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "LUK"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{Q31}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": ""
+            }
+          ]
+        ]
+      },
+      {
+        "key": "params",
+        "type": "objArray",
+        "array": [
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "STR"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H25}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "CON"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H27}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "DEX"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H29}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "APP"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H31}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "POW"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H33}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "SIZ"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H35}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "INT"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H37}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "EDU"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H39}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "MOV"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{O33}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "DB"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{T35}}"
+            }
+          ]
+        ]
+      },
+      {
+        "key": "commands",
+        "type": "string",
+        "value": "CC<={SAN} SAN\nCC<={LUK} LUK\nCC<={STR} STR\nCC<={CON} CON\nCC<={DEX} DEX\nCC<={APP} APP\nCC<={POW} POW\nCC<={SIZ} SIZ\nCC<={INT} INT\nCC<={EDU} EDU\n===專業技能===\nCC<={{J44}} 會計\nCC<={{J45}} 估價\nCC<={{J46}} 法律\nCC<={{J47}} 電腦使用\nCC<={{J48}} 機械維修\nCC<={{J49}} 電器維修\nCC<={{J50}} 鎖匠\nCC<={{J51}} 操縱重型機械\n===知識技能===\nCC<={{J53}} 自然學\nCC<={{J54}} 歷史\nCC<={{J55}} 神秘學\nCC<={{J56}} 人類學\nCC<={{J57}} 考古學\nCC<={{J58}} 科學: 數學\nCC<={{J59}} 科學: 化學\nCC<={{J60}} 科學: 藥學\nCC<={{J61}} 科學: 電子學\nCC<={{J62}} 科學: 物理學\nCC<={{J63}} 科學: 工程學\nCC<={{J64}} 科學: 密碼學\nCC<={{J65}} 科學: 天文學\nCC<={{J66}} 科學: 地質學\nCC<={{J67}} 科學: 氣象學\nCC<={{J68}} 科學: 生物學\nCC<={{J69}} 科學: 動物學\nCC<={{J70}} 科學: 植物學\nCC<={{J71}} 科學: 鑑識學\nCC<={{J72}} 科學: {{D72}}\nCC<={{J73}} 科學: {{D73}}\nCC<={{J74}} 其他學問: {{D74}}\nCC<={{J75}} 其他學問: {{D75}}\nCC<={{J76}} 其他學問: {{D76}}\nCC<={{J77}} 其他學問: {{D77}}\n===社交技能===\nCC<={{W44}} 信用評級\nCC<={{W45}} 心理學\nCC<={{W46}} 話術\nCC<={{W47}} 說服\nCC<={{W48}} 威嚇\nCC<={{W49}} 魅惑\n===調查技能===\nCC<={{W51}} 偵查\nCC<={{W52}} 聆聽\nCC<={{W53}} 圖書館使用\nCC<={{W54}} 隱匿\nCC<={{W55}} 追蹤\nCC<={{W56}} 巧手\nCC<={{W57}} 喬裝\nCC<={{W58}} 求生: {{Q58}}\nCC<={{W59}} 求生: {{Q59}}\nCC<={{W60}} 求生: {{Q60}}\nCC<={{W61}} 克蘇魯神話\n===移動技能===\nCC<={{W63}} 攀爬\nCC<={{W64}} 跳躍\nCC<={{W65}} 游泳\nCC<={{W66}} 導航\nCC<={{W67}} 騎術\nCC<={{W68}} 駕車\nCC<={{W69}} 專業駕駛: {{Q69}}\nCC<={{W70}} 專業駕駛: {{Q70}}\n===技藝技能===\nCC<={{W72}} 藝術: 表演\nCC<={{W73}} 藝術: 美術\nCC<={{W74}} 藝術: 偽造\nCC<={{W75}} 藝術: 攝影\nCC<={{W76}} 藝術: {{Q76}}\nCC<={{W77}} 藝術: {{Q77}}\n===語言技能===\nCC<={{AJ44}} 母語: {{AD44}}\nCC<={{AJ45}} 其他語言: {{AD45}}\nCC<={{AJ46}} 其他語言: {{AD46}}\nCC<={{AJ47}} 其他語言: {{AD47}}\n===醫療技能===\nCC<={{AJ49}} 急救\nCC<={{AJ50}} 醫學\nCC<={{AJ51}} 心理分析\n===戰鬥技能===\nCC<={{AJ53}} 閃避\nCC<={{AJ54}} 投擲\nCC<={{AJ55}} 格鬥: 鬥毆\nCC<={{AJ56}} 格鬥: 劍\nCC<={{AJ57}} 格鬥: 矛\nCC<={{AJ58}} 格鬥: 斧頭\nCC<={{AJ59}} 格鬥: 絞殺\nCC<={{AJ60}} 格鬥: 電鋸\nCC<={{AJ61}} 格鬥: 連枷\nCC<={{AJ62}} 格鬥: 鞭子\nCC<={{AJ63}} 火器: 弓\nCC<={{AJ64}} 火器: 手槍\nCC<={{AJ65}} 火器: 步槍/霰彈槍\nCC<={{AJ66}} 火器: 衝鋒槍\nCC<={{AJ67}} 火器: 機槍\nCC<={{AJ68}} 火器: 重武器\nCC<={{AJ69}} 火器: 火焰噴射器\nCC<={{AJ70}} 火器: 炮術\n===特殊技能===\nCC<={{AJ72}} 讀唇\nCC<={{AJ73}} 催眠\nCC<={{AJ74}} 潛水\nCC<={{AJ75}} 爆破\nCC<={{AJ76}} 動物馴養\nCC<={{AJ77}} {{AC77}}\n"
+      }
+    ]
+  }
+]
