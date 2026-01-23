@@ -1,0 +1,32 @@
+name: Build and Deploy Angular
+
+on:
+  push:
+    branches:
+      - main # 當你推送到 main 分支時觸發
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 建議使用與你開發環境一致的版本
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        # 重要：請將 <YOUR_REPO_NAME> 換成你的 GitHub 儲存庫名稱
+        run: npx ng build --base-href /excel-reader/
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/excel-reader/browser # Angular 17+ 預設路徑通常在此
+          branch: gh-pages # 部署到的分支
