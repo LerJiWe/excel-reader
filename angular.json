@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test",
+            "outputPath": "dist/excel-reader",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
