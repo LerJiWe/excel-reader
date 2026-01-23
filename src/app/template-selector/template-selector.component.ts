@@ -33,7 +33,7 @@ export class TemplateSelectorComponent {
   public select(event: any) {
 
     const path = event.value;
-    this.http.get(`public/${path}`).subscribe(x => {
+    this.http.get(`${path}`).subscribe(x => {
       console.log('現在是誰', x);
       this.tmpJSONService.genTemplateData(x);
     });

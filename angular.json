@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test": {
+    "excel-reader": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -24,7 +24,7 @@
               {
                 "glob": "**/*",
                 "input": "public",
-                "output": "/public"
+                "output": "."
               }
             ],
             "styles": [
