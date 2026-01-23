@@ -1,0 +1,233 @@
+[
+  {
+    "key": "kind",
+    "type": "string",
+    "value": "character"
+  },
+  {
+    "key": "data",
+    "type": "obj",
+    "obj": [
+      {
+        "key": "name",
+        "type": "string",
+        "value": "{{D6}}"
+      },
+      {
+        "key": "initiative",
+        "type": "number",
+        "value": "{{H24}}"
+      },
+      {
+        "key": "memo",
+        "type": "string",
+        "value": "{{Y68}}"
+      },
+      {
+        "key": "status",
+        "type": "objArray",
+        "array": [
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "HP"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{D30}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{H30}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "MP"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{O30}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{T30}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "SEN"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{Y30}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{Y30}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "LUK"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{Y26}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": ""
+            }
+          ]
+        ]
+      },
+      {
+        "key": "params",
+        "type": "objArray",
+        "array": [
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "STR"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H22}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "CON"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{T22}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "DEX"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H24}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "APP"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{H26}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "POW"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{T26}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "SIZ"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{AE22}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "INT"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{T24}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "EDU"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{AE24}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "MOV"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{AE28}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "DB"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{AE55}}"
+            }
+          ]
+        ]
+      },
+      {
+        "key": "commands",
+        "type": "string",
+        "value": "CC<={SEN} SEN\nCC<={LUK} LUK\nCC<={STR} STR\nCC<={CON} CON\nCC<={DEX} DEX\nCC<={APP} APP\nCC<={POW} POW\nCC<={SIZ} SIZ\nCC<={INT} INT\nCC<={EDU} EDU\n===調查===\nCC<={{V62}} 偵查\nCC<={{V59}} 嗅聞\nCC<={{V68}} 追蹤\nCC<={{J70}} 聆聽\nCC<={{J65}} 人類語言\n===社交===\nCC<={{J68}} 洞察\nCC<={{V63}} 地位\nCC<={{J59}} 賣萌\nCC<={{J64}} 嘶聲威嚇\n===戰鬥===\nCC<={{J60}} 閃避\nCC<={{J63}} 戰鬥\nCC<={{V69}} 洗澡\n===行動===\nCC<={{J57}} 攀爬\nCC<={{J69}} 跳躍\nCC<={{V66}} 游泳\nCC<={{V70}} 號叫\n===知識===\nCC<={{J71}} 自然界知識\nCC<={{J66}} 人類知識\nCC<={{V65}} 街頭知識\nCC<={{J61}} 幻夢境知識\nCC<={{J58}} 克蘇魯神話\n===其它===\nIfNEq<<{{D62}},{{J62}},CC<={{J62}} 進入夢鄉\n,>>IfNEq<<{{D67}},{{J67}},CC<={{J67}} 催眠\n,>>IfNEq<<{{P57}},{{V57}},CC<={{V57}} 導航\n,>>IfNEq<<{{P58}},{{V58}},CC<={{V58}} 神秘學\n,>>IfNEq<<{{P60}},{{V60}},CC<={{V60}} 察覺危險\n,>>IfNEq<<{{P61}},{{V61}},CC<={{V61}} 睡眠\n,>>IfNEq<<{{P64}},{{V64}},CC<={{V64}} 隱密行動\n,>>IfNEq<<{{P67}},{{V67}},CC<={{V67}} 投擲\n,>>"
+      }
+    ]
+  }
+]
