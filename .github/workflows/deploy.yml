@@ -16,17 +16,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 建議使用與你開發環境一致的版本
+          node-version: '24' # 解決你的警告訊息，使用最新推薦版本
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Angular app
-        # 重要：請將 <YOUR_REPO_NAME> 換成你的 GitHub 儲存庫名稱
-        run: npx ng build --base-href /excel-reader/
+        # 請確保專案名稱與 angular.json 一致
+        run: npx ng build --configuration production --base-href /excel-reader/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          # 注意：請先檢查本機執行 ng build 後，dist 裡面的確切資料夾結構
+          # 如果沒有 SSR，通常是 dist/excel-reader
+          # 如果有 SSR，通常是 dist/excel-reader/browser
           folder: dist/excel-reader/browser # Angular 17+ 預設路徑通常在此
           branch: gh-pages # 部署到的分支
