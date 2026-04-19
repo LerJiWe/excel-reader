@@ -22,5 +22,9 @@
   {
     "name": "Fate Core",
     "path": "fate_core.template.json"
+  },
+  {
+    "name": "常態崩壞",
+    "path": "normal_collapses.template.json"
   }
 ]

@@ -37,27 +37,27 @@ export class TempJSONService {
     }
   }
 
-  /**
-   * 目前先帶值
-   * 再處理自定義函式 EX: IF<<內容>>
-   * @param str
-   */
   private genStr(str: string) {
-    const replaceAction = (match: string, key: string) => {
-      // console.log('match', match);
-      // console.log('key', key);
-      let r = this.getValue(key);
-      if (typeof r == 'string') {
-        return r.trim();
-      } else {
-        return r;
-      }
-    }
-    return str
-      .replace(/\{\{(\w+)\}\}/g, replaceAction)
-      .replace(/IfNEq<<(([\w\s\u4e00-\u9fa5\<\=\:\-\+]+\,)+)>>/g, this.IfNEq);
+    // 第一步：先處理函數 (IfNEq)，這時裡面的參數可能還帶著 {{J87}}
+    const stage1 = str.replace(/IfNEq<<([\s\S]*?)>>/g, (match, content) => {
+      // 這裡 content 是 "{{J87}},{{M87}},達成,不可用,"
+      const args = content.split(',');
+
+      // 呼叫 IfNEq，並在 IfNEq 內部去解析變數
+      return this.IfNEq(match, ...args);
+    });
+
+    // 第二步：處理剩下的、或是 IfNEq 吐出來字串中的變數
+    return this.replaceVariables(stage1);
   }
-  //CC<={{V69}} 藝術 {{J69}},
+
+  // 提取出來的變數替換邏輯
+  private replaceVariables(str: string): string {
+    return str.replace(/\{\{(\w+)\}\}/g, (match, key) => {
+      let r = this.getValue(key);
+      return typeof r === 'string' ? r.trim() : r;
+    });
+  }
 
   private genNum(str: string) {
     let tempStr = this.genStr(str);
@@ -108,30 +108,20 @@ export class TempJSONService {
     return result;
   }
 
-  // 第一個跟第二個參數如果不相等，就回傳第三個否則回傳空字串
-  private IfNEq(match: string, key: string) {
-    console.log('ifeq執行');
-    console.log('key', key);
-    let paramsArray = key.split(',');
-    console.log('params', paramsArray);
+  private IfNEq(match: string, ...args: string[]): string {
+    // 假設參數一和二是要比較的對象
+    // 我們先把它們從 {{J87}} 轉成真實的值
+    const val1 = this.replaceVariables(args[0]);
+    const val2 = this.replaceVariables(args[1]);
+    const resultIfTrue = args[2]; // 第三個參數是達成時要輸出的內容
+    const resultIfFalse = args[3] || ''; // 第四個參數是未達成時（選填）
 
-    return paramsArray[0] === paramsArray[1] ?
-      "" : paramsArray[2];
-
-    // while (true) {
-    //   let n: number = key.search(/(\w+\,)/g)
-    //   console.log('nnn', n)
-    //   if (n === -1) {
-    //     console.log("出去囉")
-    //     break;
-    //   }
-    //   let token = key.substring(0, n + 1);
-    //   console.log('token', token);
-    //   key = key.substring(n + 2);
-    //   console.log('new key', key);
-    // }
-
-    return match;
+    if (val1 !== val2) {
+      // 如果不相等，回傳結果。注意：結果可能也包含變數，所以也要解析
+      return this.replaceVariables(resultIfTrue);
+    } else {
+      return this.replaceVariables(resultIfFalse);
+    }
   }
 
 }
