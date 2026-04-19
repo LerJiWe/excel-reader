@@ -18,5 +18,9 @@
   {
     "name": "克蘇魯的呼喚roll 20版",
     "path": "coc7e.template_roll20.json"
+  },
+  {
+    "name": "Fate Core",
+    "path": "fate_core.template.json"
   }
 ]
