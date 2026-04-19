@@ -47,11 +47,15 @@ export class TempJSONService {
       // console.log('match', match);
       // console.log('key', key);
       let r = this.getValue(key);
-      return r;
+      if (typeof r == 'string') {
+        return r.trim();
+      } else {
+        return r;
+      }
     }
     return str
       .replace(/\{\{(\w+)\}\}/g, replaceAction)
-      .replace(/IfNEq<<(([\w\s\u4e00-\u9fa5\<\=\:\-]+\,)+)>>/g, this.IfNEq);
+      .replace(/IfNEq<<(([\w\s\u4e00-\u9fa5\<\=\:\-\+]+\,)+)>>/g, this.IfNEq);
   }
   //CC<={{V69}} 藝術 {{J69}},
 

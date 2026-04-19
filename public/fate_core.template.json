@@ -1,0 +1,90 @@
+[
+  {
+    "key": "kind",
+    "type": "string",
+    "value": "character"
+  },
+  {
+    "key": "data",
+    "type": "obj",
+    "obj": [
+      {
+        "key": "name",
+        "type": "string",
+        "value": "{{B3}}"
+      },
+      {
+        "key": "initiative",
+        "type": "number",
+        "value": "{{}}"
+      },
+      {
+        "key": "memo",
+        "type": "string",
+        "value": "{{}}"
+      },
+      {
+        "key": "status",
+        "type": "objArray",
+        "array": [
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "命運點"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "{{L4}}"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "{{L4}}"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "免費援引"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "5"
+            }
+          ],
+          [
+            {
+              "key": "label",
+              "type": "string",
+              "value": "推助"
+            },
+            {
+              "key": "value",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "key": "max",
+              "type": "number",
+              "value": "5"
+            }
+          ]
+        ]
+      },
+      {
+        "key": "commands",
+        "type": "string",
+        "value": ""
+      }
+    ]
+  }
+]
